@@ -1,0 +1,8 @@
+<h1>Is it my birthday yet?</h1>
+<h1><% if @time.day == params[:day].to_i && @time.month == params[:month].to_i %>
+YES!
+<% else %>
+NO!
+<% end %></h1>
+<h2>Today is <%=@time.month%>/<%= @time.day %>/<%=@time.year %> </h2>
+<h2>Your birthday is <%= params[:month].to_i%>/<%= params[:day].to_i %></h2>
