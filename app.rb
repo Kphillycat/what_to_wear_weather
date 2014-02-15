@@ -22,6 +22,7 @@ module Name
 
     get '/clothes/:latlng' do
       # debugger
+      Weather.get_weather(params[:latlng])
       {"clothes" => "winter"}.to_json
     end
 
