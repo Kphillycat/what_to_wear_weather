@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var lat, lng;
+    // images from http://www.mycutegraphics.com/graphics/seasons-images.html
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -8,7 +9,7 @@ $(document).ready(function(){
                 lng = position.coords.longitude;
                 $.ajax('/clothes/' + lat + ',' + lng, {
                     success: function(response) {
-                                $("<img src=img/" + $.parseJSON(response).clothes + ".png />").appendTo($(".container"));
+                                $("<img src=img/" + $.parseJSON(response).clothes + ".png />").appendTo($(".clothes-container"));
                             }   
                 });
             });
